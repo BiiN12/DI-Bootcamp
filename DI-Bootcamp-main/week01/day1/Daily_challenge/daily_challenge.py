@@ -1,5 +1,3 @@
-import random
-
 while True:
     string = input('Enter 10 character long string: ')
     string_len = len(string)
