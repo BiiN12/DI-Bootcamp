@@ -35,13 +35,6 @@ print()
 # Exercise 2 : Dogs
 class Dog:
     def __init__(self, name, height):
-        """
-        Initialize a Dog object with name and height.
-        
-        Args:
-            name (str): The name of the dog
-            height (int/float): The height of the dog in cm
-        """
         self.name = name
         self.height = height
     
@@ -93,12 +86,6 @@ print()
 # Exercise 3 : Who’s the song producer?
 class Song:
     def __init__(self, lyrics):
-        """
-        Initialize a Song object with lyrics.
-        
-        Args:
-            lyrics (list): A list of strings, each representing a line of the song
-        """
         self.lyrics = lyrics
     
     def sing_me_a_song(self):
