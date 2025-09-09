@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        p {
+            background: yellow;
+            color: red;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        button {
+            padding: 10px 15px;
+            margin: 10px 0;
+            background: #007cba;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #005a87;
+        }
+
+        #container {
+            border: 2px solid #ccc;
+            padding: 10px;
+            margin: 10px 0;
+            min-height: 50px;
+        }
+
+        .info {
+            background: #f0f0f0;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Timer Exercise</h1>
+
+    <div class="info">
+        <h3>What happens:</h3>
+        <p><strong>Part I:</strong> Alert appears after 2 seconds</p>
+        <p><strong>Part II:</strong> First paragraph added after 2 seconds</p>
+        <p><strong>Part III:</strong> New paragraphs added every 2 seconds until 5 total, then stops automatically</p>
+    </div>
+
+    <div id="container"></div>
+    <button id="clear">Clear Interval</button>
+
+    <script>
+        let intervalId;
+
+        // Part I: setTimeout with alert after 2 seconds
+        setTimeout(function () {
+            alert("Hello World");
+        }, 2000);
+
+        // Part II: setTimeout to add paragraph after 2 seconds
+        setTimeout(function () {
+            const container = document.getElementById('container');
+            const paragraph = document.createElement('p');
+            paragraph.textContent = 'Hello World';
+            container.appendChild(paragraph);
+        }, 2000);
+
+        // Part III: setInterval to add paragraphs every 2 seconds
+        intervalId = setInterval(function () {
+            const container = document.getElementById('container');
+            const paragraph = document.createElement('p');
+            paragraph.textContent = 'Hello World';
+            container.appendChild(paragraph);
+
+            // Clear interval when there are 5 paragraphs
+            if (container.children.length >= 5) {
+                clearInterval(intervalId);
+                console.log('Interval cleared - 5 paragraphs reached');
+            }
+        }, 2000);
+
+        // Clear button functionality
+        document.getElementById('clear').addEventListener('click', function () {
+            clearInterval(intervalId);
+            console.log('Interval cleared by button click');
+        });
+    </script>
+</body>
+
+</html>
