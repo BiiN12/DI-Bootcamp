@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background: linear-gradient(to right, #ff7e5f, #feb47b);
+        color: #fff;
+        text-align: center;
+        padding: 20px;
+    }
+
+    #navBar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: rgba(0, 0, 0, 0.2);
+        padding: 10px 20px;
+        border-radius: 10px;
+        margin-bottom: 20px;
+    }
+
+    #navBar a {
+        color: #fff;
+        text-decoration: none;
+        font-size: 1.2em;
+    }
+
+    #navBar img {
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+    }
+</style>
+<nav id="navBar"></nav>
+<script>
+    const navBar = document.getElementById('navBar');
+    (function (name) {
+        navBar.innerHTML = `<div><a href="#">${name}</a></div>
+        <div><img src="https://www.pngall.com/wp-content/uploads/5/User-Profile-PNG-High-Quality-Image.png" alt="Profile" ></div>`;
+    })("BiiN");
+</script>

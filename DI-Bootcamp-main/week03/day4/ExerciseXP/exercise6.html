@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background: linear-gradient(to right, #6a11cb, #2575fc);
+        color: #fff;
+        text-align: center;
+        padding: 50px;
+    }
+
+    h1 {
+        font-size: 2.5em;
+        margin-bottom: 20px;
+    }
+
+    .highlight {
+        color: #ffd700;
+        font-weight: bold;
+    }
+
+    #fortune {
+        font-size: 1.4em;
+        line-height: 1.6;
+        background: rgba(255, 255, 255, 0.2);
+        padding: 25px;
+        border-radius: 15px;
+        margin: 20px 0;
+        border-left: 4px solid #ffd700;
+    }
+</style>
+<h1>Fortune Teller</h1>
+<p>Open the console to see the fortune message.</p>
+<div id="fortune"></div>
+<script>
+    // Self Invoking Function (IIFE) - Fortune Teller
+    (function (numberOfChildren, partnerName, geographicLocation, jobTitle) {
+        // Create the fortune message
+        const fortune = `You will be a <span class="highlight">${jobTitle}</span> in <span class="highlight">${geographicLocation}</span>, and married to <span class="highlight">${partnerName}</span> with <span class="highlight">${numberOfChildren}</span> kids.`;
+
+        // Display the fortune in the DOM
+        document.getElementById('fortune').innerHTML = fortune;
+
+        // Optional: Log to console as well
+        console.log(`Fortune told: You will be a ${jobTitle} in ${geographicLocation}, and married to ${partnerName} with ${numberOfChildren} kids.`);
+
+    })(3, "Jane", "Paris", "Software Developer"); // Arguments passed directly to IIFE
+</script>

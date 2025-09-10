@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background: linear-gradient(to right, #11998e, #38ef7d);
+        color: #fff;
+        text-align: center;
+        padding: 50px;
+    }
+
+    .highlight {
+        color: #ffd700;
+    }
+</style>
+<div id="result"></div>
+<script>
+    const resultDiv = document.getElementById('result');
+    function makeJuice(size) {
+        function addIngredients(ingredient1, ingredient2, ingredient3) {
+            resultDiv.innerHTML = `<h2>The client wants a <span class="highlight">${size}</span> juice, containing <span class="highlight">${ingredient1}, ${ingredient2}</span> and <span class="highlight">${ingredient3}</span>.</h2>`;
+        }
+        addIngredients("apple", "banana", "orange");
+    }
+    makeJuice("large");
+
+    function makeJuice2(size) {
+        const ingredients = [];
+        function addIngredients(ingredient1, ingredient2, ingredient3) {
+            ingredients.push(ingredient1, ingredient2, ingredient3);
+        }
+        function displayJuice() {
+            resultDiv.innerHTML += `<h2>The client wants a <span class="highlight">${size}</span> juice, containing <span class="highlight">${ingredients.join(", ")}</span>.</h2>`;
+        }
+        addIngredients("mango", "pineapple", "kiwi");
+        addIngredients("apple", "banana", "orange");
+        displayJuice();
+    }
+    makeJuice2("medium");
+</script>
