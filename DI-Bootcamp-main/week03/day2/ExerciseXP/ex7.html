@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <section class="listBooks"></section>
+
+    <script>
+        const allBooks = [
+            {
+                title: "The Design of Everyday Things",
+                author: "Don Norman",
+                alreadyRead: false,
+                img: "https://blackwells.co.uk/jacket/l/9780465050659.jpg",
+            },
+            {
+                title: "The Most Human Human",
+                author: "Brian Christian",
+                alreadyRead: true,
+                img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR5lVTEPnq__58xVUVaHmSBE9EwHq5NSfjuiw&s",
+            },
+        ];
+
+        const listBooks = document.querySelector(".listBooks");
+
+        for (let i = 0; i < allBooks.length; i++) {
+            const book = allBooks[i];
+            const bookElement = document.createElement("div");
+            bookElement.classList.add("book");
+            bookElement.innerHTML = `
+                <h2>${book.title}</h2>
+                <p>By ${book.author}</p>
+                <img src="${book.img}" width="100" alt="${book.title}">
+            `;
+
+            if (book.alreadyRead) {
+                bookElement.style.backgroundColor = "red";
+            }
+            listBooks.appendChild(bookElement);
+        }
+    </script>
+</body>
+
+</html>
