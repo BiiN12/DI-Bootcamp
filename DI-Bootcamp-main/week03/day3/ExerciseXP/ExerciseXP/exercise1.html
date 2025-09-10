@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        @keyframes fadeOut {
+            0% {
+                opacity: 1;
+                /* Start fully visible */
+            }
+
+            100% {
+                opacity: 0;
+                /* End fully invisible */
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <article>
+        <h1> Some Facts </h1>
+        <h2> The Chocolate </h2>
+        <h3> History of the chocolate </h3>
+        <p> Chocolate is made from tropical Theobroma cacao tree seeds.
+            Its earliest use dates back to the Olmec civilization in Mesoamerica.</p>
+        <p> After the European discovery of the Americas, chocolate became
+            very popular in the wider world, and its demand exploded. </p>
+        <p> Chocolate has since become a popular food product that millions enjoy every day,
+            thanks to its unique, rich, and sweet taste.</p>
+        <p> But what effect does eating chocolate have on our health?</p>
+    </article>
+
+    <script>
+        const heading1 = document.querySelector("h1");
+        console.log(heading1);
+
+        const article = document.querySelector("article");
+        article.removeChild(article.lastElementChild);
+
+        const heading2 = document.querySelector("h2");
+        heading2.style.cursor = "pointer";
+        heading2.addEventListener("click", function () {
+            heading2.style.backgroundColor = "red";
+        });
+
+        const heading3 = document.querySelector("h3");
+        heading3.style.cursor = "pointer";
+        heading3.addEventListener("click", function () {
+            heading3.style.display = "none";
+        });
+
+        const paragraphs = document.querySelectorAll("p");
+        const button = document.createElement("button");
+        button.addEventListener("click", function () {
+            paragraphs.forEach(p => {
+                p.style.fontWeight = "bold";
+            });
+        })
+
+        button.textContent = "Make all text bold";
+        article.appendChild(button);
+
+        heading1.addEventListener("mouseover", function () {
+            const randomFontSize = Math.random() * 100;
+            heading1.style.fontSize = randomFontSize + "px";
+        });
+
+        heading2.addEventListener("mouseout", function () {
+            heading2.style.animation = "fadeOut 2s forwards";
+        });
+    </script>
+</body>
+
+</html>
