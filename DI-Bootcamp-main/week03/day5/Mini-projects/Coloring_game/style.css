@@ -1,0 +1,99 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: lightblue;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+}
+
+h1 {
+    color: darkblue;
+}
+
+.grid-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    border: 2px solid darkblue;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.sidebar {
+    background-color: lightgray;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: darkblue;
+    color: white;
+    font-size: 16px;
+    width: 100%;
+    border: none;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.color-palette {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2px;
+    margin-bottom: 10px;
+}
+
+.color-swatch {
+    width: 30px;
+    height: 30px;
+    margin: 1px;
+    border: 1px solid black;
+    cursor: pointer;
+}
+
+.color-box {
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+.color-box.selected {
+    /* border: 2px solid red; */
+    box-shadow: 0 0 10px rgba(255, 0, 0, 0.8);
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(120, 1fr);
+    grid-template-rows: repeat(120, 1fr);
+    /* padding: 2px; */
+    width: 600px;
+    background-color: lightgray;
+    border: 1px solid lightgray;
+    user-select: none;
+}
+
+.grid div {
+    background-color: white;
+    /* border: 1px solid lightgray; */
+    cursor: pointer;
+}
+
+.footer {
+    margin-top: 20px;
+    font-size: 14px;
+    color: darkblue;
+}
+
+.footer a {
+    color: darkblue;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
