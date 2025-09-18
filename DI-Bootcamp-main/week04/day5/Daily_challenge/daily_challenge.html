@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        button {
+            margin-top: 10px;
+            /* display: block; */
+        }
+
+        img {
+            display: flex;
+            justify-content: center;
+            margin-top: 10px;
+            max-width: 300px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <form id="form">
+        <input type="text" id="input" placeholder="Enter a tag">
+        <button type="submit">Get Random GIF</button>
+    </form>
+    <button id="deleteAll">Delete All</button>
+    <div id="container"></div>
+
+    <script>
+        const gifUrl = "https://api.giphy.com/v1/gifs/random?"
+        const apiKey = "hpvZycW22qCjn5cRM1xtWB8NKq4dQ2My"
+        const form = document.getElementById("form");
+        form.addEventListener("submit", function (event) {
+            event.preventDefault();
+            const input = document.getElementById("input");
+            const tag = input.value;
+            doAll(gifUrl, apiKey, tag);
+            input.value = ""; // Clear input field
+        });
+
+        async function doAll(url, apiKey, tag) {
+            const response = await fetch(`${url}api_key=${apiKey}&tag=${tag}&rating=g`);
+            let data = await response.json();
+            console.log(data);
+            let gifUrl = data.data.images.original.url;
+            console.log(gifUrl);
+
+            const deleteAllBtn = document.getElementById("deleteAll");
+            const container = document.getElementById("container");
+            const imgElm = document.createElement("img");
+            imgElm.src = gifUrl;
+            const deleteBtn = document.createElement("button");
+            deleteBtn.textContent = "Delete GIF";
+            deleteBtn.addEventListener("click", function () {
+                imgElm.remove();
+                deleteBtn.remove();
+            });
+            deleteAllBtn.addEventListener("click", function () {
+                container.innerHTML = "";
+            });
+            container.appendChild(deleteBtn);
+            container.appendChild(imgElm);
+        }
+    </script>
+</body>
+
+</html>
