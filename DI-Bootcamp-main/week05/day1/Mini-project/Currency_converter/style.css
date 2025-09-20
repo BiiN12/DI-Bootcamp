@@ -1,0 +1,109 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #1f1f1f;
+}
+
+.container {
+    background: #e8eaed;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 400px;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.converter {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.from,
+.to {
+    flex: 1;
+    display: flex;
+}
+
+.converter input {
+    padding: 10px;
+    /* border: 1px 0 0 1px solid #ccc; */
+    border-radius: 5px 0 0 5px;
+    font-size: 16px;
+}
+
+.converter select {
+    background: #fff;
+    padding: 10px;
+    /* border: 0 1px 1px 0 solid #ccc; */
+    border-radius: 0 5px 5px 0;
+    font-size: 16px;
+}
+
+.converter input {
+    flex: 1;
+}
+
+.converter select {
+    width: 100px;
+}
+
+.converter input,
+.converter select {
+    border: 1px solid #ccc;
+    outline: none;
+}
+
+.converter input:focus,
+.converter select:focus {
+    border-color: #333;
+}
+
+.converter span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    color: #333;
+}
+
+.converter span i {
+    margin: 0 10px;
+    cursor: pointer;
+    rotate: 90deg;
+}
+
+.converter button {
+    padding: 10px;
+    background: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.converter button:hover {
+    background: #555;
+}
+
+.result {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 24px;
+    color: #333;
+}

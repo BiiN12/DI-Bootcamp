@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currency Converter</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/95d0fb72b9.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>Currency Converter</h1>
+        <div class="converter">
+            <div class="from">
+                <input type="number" id="amount" placeholder="Enter amount" />
+                <select id="fromCurrency">
+                    <option value="USD">USD</option>
+                    <option value="EUR">EUR</option>
+                    <option value="ILS">NIS</option>
+                    <option value="GBP">GBP</option>
+                </select>
+            </div>
+            <span id="switchBtn"><i class="fa-solid fa-repeat"></i></span>
+            <div class="to">
+                <input type="number" id="convertedAmount" placeholder="Converted amount" readonly />
+                <select id="toCurrency">
+                    <option value="ILS">NIS</option>
+                    <option value="USD">USD</option>
+                    <option value="EUR">EUR</option>
+                    <option value="GBP">GBP</option>
+                </select>
+            </div>
+            <button id="convertBtn">Convert</button>
+        </div>
+        <div class="result" id="result"></div>
+
+        <script src="script.js"></script>
+</body>
+
+</html>
