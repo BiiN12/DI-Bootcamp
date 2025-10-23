@@ -40,6 +40,12 @@ router.post("/tasks", checkSchema(taskValidation), async (req, res) => {
     const data = await readFile("./assets/task.json", "utf-8");
     const tasks = JSON.parse(data);
 
+    // to validate
+    const errors = validationResult(req);
+    if (!errors.isEmpty()) {
+      return res.status(400).json({ errors: errors.array() });
+    }
+
     const newTask = {
       id: tasks.length ? tasks[tasks.length - 1].id + 1 : 1,
       ...req.body,
@@ -62,6 +68,11 @@ router.put(
     try {
       const data = await readFile("./assets/task.json", "utf-8");
       const tasks = JSON.parse(data);
+
+      const errors = validationResult(req);
+      if (!errors.isEmpty()) {
+        return res.status(400).json({ errors: errors.array() });
+      }
 
       const id = parseInt(req.params.id);
       const index = tasks.findIndex((t) => t.id == id);
