@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        form {
+            max-width: 400px;
+            margin: auto;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="password"] {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 8px;
+            box-sizing: border-box;
+        }
+
+        input[type="submit"] {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        /* button {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        } */
+
+        .login {
+            text-align: center;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Sign Up</h1>
+    <form id="form1">
+        <label for="fName">First Name:</label>
+        <input type="text" id="firstName" name="firstName" required><br><br>
+
+        <label for="lName">Last Name:</label>
+        <input type="text" id="lastName" name="lastName" required><br><br>
+
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required><br><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required><br><br>
+
+        <input type="submit" value="Register">
+        <!-- <button type="button" id="submitBtn" ">Register</button> -->
+    </form>
+
+    <div class="login">
+        <p>Already have an account? <a href="login.html">Login</a></p>
+    </div>
+
+    <script>
+        document.getElementById("form1").addEventListener("submit", async (e) => { // Add async here!
+            e.preventDefault();
+
+            const url = "http://localhost:3000/register";
+            const firstName = document.getElementById("firstName").value;
+            const lastName = document.getElementById("lastName").value;
+            const email = document.getElementById("email").value;
+            const username = document.getElementById("username").value;
+            const password = document.getElementById("password").value;
+
+            const data = {
+                firstName,
+                lastName,
+                username,
+                email,
+                password
+            };
+
+            const options = {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(data)
+            };
+
+            try {
+                const res = await fetch(url, options);
+                const responseData = await res.json();
+
+                console.log(responseData)
+
+                if (res.status === 201) {
+                    alert("Successfully registered!");
+                    // Clear fields on success
+                    document.getElementById("form1").reset();
+                    return;
+                }
+
+                if (res.status === 400) {
+                    if (responseData.error) {
+                        alert(responseData.error);
+                        return;
+                    }
+                    responseData.errors.forEach(error => {
+                        alert(error.msg);
+                    });
+                    return;
+                }
+
+                if (res.status === 500) {
+                    alert("Something went wrong!");
+                    return;
+                }
+            } catch (err) {
+                console.log(err);
+                alert("Network error occurred!");
+            }
+        })
+    </script>
+</body>
+
+</html>

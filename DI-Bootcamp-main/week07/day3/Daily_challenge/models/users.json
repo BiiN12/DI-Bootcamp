@@ -1,0 +1,58 @@
+[
+  {
+    "id": 1,
+    "firstName": "Chris",
+    "lastName": "Brown",
+    "username": "chris",
+    "email": "chris.b@gmail.com",
+    "password": "$2b$10$25K2CbInM5eE55jo.mlr.uLm9Cflh4eybOXdzDqevwg0AeGRaGIpa"
+  },
+  {
+    "id": 2,
+    "firstName": "Peter",
+    "lastName": "Pan",
+    "username": "peter",
+    "email": "peter@pan.com",
+    "password": "$2b$10$Dxsk4btSi91N.2RvkFoxheWuIQ2bWSZkQ8YU10z3LlSERWIh0nWH2"
+  },
+  {
+    "id": 3,
+    "firstName": "Tomas",
+    "lastName": "Hank",
+    "username": "tomas",
+    "email": "tomas@example.com",
+    "password": "$2b$10$8IrIPDal13asbpsekB5Zcexqx5whcsZd0vOSXbfKcZErGYFl/B5Du"
+  },
+  {
+    "id": 4,
+    "firstName": "John",
+    "lastName": "Lev",
+    "username": "john0",
+    "email": "john0@eample.com",
+    "password": "$2b$10$74HOXwYY7QzrGgIMe8569uc5wxr2BaEZsMQrMnS77g5ppaVcA.mAW"
+  },
+  {
+    "id": 5,
+    "firstName": "Sam",
+    "lastName": "Holland",
+    "username": "sam09",
+    "email": "sam@example.com",
+    "password": "$2b$10$pFLt4t9QGycGHTFRI0vTTu9e6TNx0LG1AFrqBFfndc3wPMQEtJwrG"
+  },
+  {
+    "id": 6,
+    "firstName": "Dan",
+    "lastName": "Rose",
+    "username": "dan_rose1",
+    "email": "dan@example.com",
+    "password": "$2b$10$r27FfSqtYmtf.WCzNJ5eve/51kkoyAGZYGXKChsfTvVTcYiZH8DG6"
+  },
+  {
+    "id": 7,
+    "firstName": "Chandler",
+    "lastName": "Bing",
+    "username": "chan_mon",
+    "email": "chan@gmail.com",
+    "password": "$2b$10$c.eTWfxwaToJ9TDdIqIlxeG2bVr4ejOgfvLFCHtFB6h0pZY/LZ6.m"
+  }
+]
