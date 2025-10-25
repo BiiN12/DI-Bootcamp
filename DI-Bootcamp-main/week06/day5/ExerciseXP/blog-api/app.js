@@ -49,4 +49,27 @@ app.post("/api/books", (req, res) => {
   res.status(201).json(book);
 });
 
+app.put("/api/books/:id", (req, res) => {
+  const book = data.find((book) => book.id === parseInt(req.params.id));
+  if (book) {
+    book.title = req.body.title;
+    book.author = req.body.author;
+    book.publishedYear = req.body.publishedYear;
+    res.json(book);
+  } else {
+    res.status(404).send("Book not found");
+  }
+});
+
+app.delete("/api/books/:id", (req, res) => {
+  const book = data.find((book) => book.id === parseInt(req.params.id));
+  if (book) {
+    const index = data.indexOf(book);
+    data.splice(index, 1);
+    res.status(204).send();
+  } else {
+    res.status(404).send("Book not found");
+  }
+});
+
 app.listen(5000, () => console.log("Server is running on port 5000"));
