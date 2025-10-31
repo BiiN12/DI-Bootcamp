@@ -1,0 +1,13 @@
+URL: URL: https://github.com/BiiN12/DI-Bootcamp/blob/main/DI-Bootcamp-main/week08/day2/Daily-challenge/src/App.jsx
+suggestions for improvement:
+- Consider adding more robust error handling to catch and display specific error types.
+- Implement input validation on the client-side to improve data quality and prevent unexpected server-side issues.
+- Use environment variables to store the server URL instead of hardcoding it.
+Correctness: 100%
+-----
+URL: URL: https://github.com/BiiN12/DI-Bootcamp/blob/main/DI-Bootcamp-main/week08/day2/Daily-challenge/src/server/server.js
+suggestions for improvement:
+- Consider adding error handling for POST requests.
+- While not strictly required, using environment variables for the port would be a good practice.
+Correctness: 100%
+-----

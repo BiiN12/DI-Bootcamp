@@ -1,0 +1,45 @@
+URL: URL: https://github.com/BiiN12/DI-Bootcamp/blob/main/DI-Bootcamp-main/week08/day2/ExerciseXP/src/App.jsx
+suggestions for improvement:
+- Implement the Bootstrap navbar as described in Exercise 1.
+- Create the `HomeScreen`, `ProfileScreen`, and `ShopScreen` components with the specific content and error-throwing behavior outlined in Exercise 1.
+- Implement the `ErrorBoundary` component's `componentDidCatch` method.
+- Implement the components `Example1`, `Example2`, and `Example3` from exercise 3 and render them.
+- Missing the implementation of Exercise 4
+Correctness: 60%
+-----
+URL: URL: https://github.com/BiiN12/DI-Bootcamp/blob/main/DI-Bootcamp-main/week08/day2/ExerciseXP/src/components/ErrorBoundary.jsx
+suggestions for improvement:
+- The ErrorBoundary component is a good start, but it only addresses part 1 of Exercise 1.  It needs to be integrated into a React Router setup with the specified components and routes as outlined in the remaining steps of Exercise 1.
+- Consider adding more specific error messages or logging to aid in debugging.
+- For production environments, replace the simple `console.log` in `componentDidCatch` with a more robust error reporting mechanism.
+Correctness: 50%
+-----
+URL: URL: https://github.com/BiiN12/DI-Bootcamp/blob/main/DI-Bootcamp-main/week08/day2/ExerciseXP/src/components/PostList.jsx
+suggestions for improvement:
+- The code only addresses Exercise 2. There's no implementation of React Router, Error Boundaries (Exercise 1), parsing complex JSON (Exercise 3), or POST requests (Exercise 4).
+- For Exercise 2, consider adding error handling in case the JSON data is malformed or missing.
+- For readability, consider extracting the post display logic into a separate component for better organization.
+Correctness: 50%
+-----
+URL: URL: https://github.com/BiiN12/DI-Bootcamp/blob/main/DI-Bootcamp-main/week08/day2/ExerciseXP/src/layouts/ShopLayout.jsx
+suggestions for improvement:
+- This code only implements a layout with navigation links, but it doesn't address the error boundary, JSON data display, or POST request requirements outlined in the exercises. It also doesn't use Bootstrap as suggested.
+- The code is missing the implementation of the ErrorBoundary component and its usage, the creation of HomeScreen, ProfileScreen, and ShopScreen components, and the handling of JSON data in PostList, Example1, Example2, and Example3 components.
+Correctness: 0%
+-----
+URL: URL: https://github.com/BiiN12/DI-Bootcamp/blob/main/DI-Bootcamp-main/week08/day2/ExerciseXP/src/pages/Home.jsx
+suggestions for improvement:
+- This code only creates a simple 'Home' component. It does not address any of the exercises outlined in the chapter content, which involve React Router, Error Boundaries, JSON data display, or POST requests.
+Correctness: 0%
+-----
+URL: URL: https://github.com/BiiN12/DI-Bootcamp/blob/main/DI-Bootcamp-main/week08/day2/ExerciseXP/src/pages/Profile.jsx
+suggestions for improvement:
+- This component is not part of any of the provided exercises. Review the instructions and implement one of the required exercises.
+- Start with Exercise 1 and create the ErrorBoundary component, then implement the routing and components.
+Correctness: 0%
+-----
+URL: URL: https://github.com/BiiN12/DI-Bootcamp/blob/main/DI-Bootcamp-main/week08/day2/ExerciseXP/src/pages/Shop.jsx
+suggestions for improvement:
+- No specific feedback.
+Correctness: 100%
+-----
