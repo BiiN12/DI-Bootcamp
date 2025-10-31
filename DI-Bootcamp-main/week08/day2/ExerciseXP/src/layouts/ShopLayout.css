@@ -1,0 +1,14 @@
+.nav-link {
+    margin: 0 10px;
+    text-decoration: none;
+    color: black;
+}
+
+.nav-link-active {
+    font-weight: bold;
+    background-color: blue;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    text-decoration: none;
+}
