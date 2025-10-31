@@ -1,0 +1,6 @@
+URL: URL: https://github.com/BiiN12/DI-Bootcamp/blob/main/DI-Bootcamp-main/week07/day5/daily-challenge/src/App.jsx
+suggestions for improvement:
+- Consider adding PropTypes for better component documentation and type checking.
+- The code can be improved by extracting the language item into a separate component, enhancing reusability and readability, especially if the component grows more complex.
+Correctness: 100%
+-----
