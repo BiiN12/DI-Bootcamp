@@ -10,8 +10,21 @@ function App() {
      animation: "slideIn 1s ease-out forwards"
   }
 
+  const generateQuote = () => {
+    const index = Math.floor(Math.random() * quotesDatabase.length)
+    const quote = quotesDatabase[index]
+
+    if (quote === quotes) {
+      return generateQuote()
+    }
+
+    return quote
+  }
+
   const handleClick = () => {
-    setQuotes(quotesDatabase[Math.floor(Math.random() * quotesDatabase.length)])
+    const newQuote = generateQuote()
+
+    setQuotes(newQuote)
     setBg(randomColor())
   }
 
@@ -21,7 +34,8 @@ function App() {
            .padStart(6, "0");
 
   useEffect(() => {
-    setQuotes(quotesDatabase[Math.floor(Math.random() * quotesDatabase.length)])
+    const newQuote = generateQuote()
+    setQuotes(newQuote)
     setBg(randomColor())
 
   }, [])
