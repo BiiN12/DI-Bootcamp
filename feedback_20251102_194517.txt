@@ -1,0 +1,6 @@
+URL: URL: https://github.com/BiiN12/DI-Bootcamp/blob/main/DI-Bootcamp-main/week08/day4/Daily-challenge/src/App.jsx
+suggestions for improvement:
+- Consider adding input validation to ensure that the user enters valid numbers and to prevent division by zero.
+- For better readability, you could use a switch statement or a dictionary to handle the different operators.
+Correctness: 100%
+-----

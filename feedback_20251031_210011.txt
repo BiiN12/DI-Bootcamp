@@ -1,0 +1,7 @@
+URL: URL: https://github.com/BiiN12/DI-Bootcamp/blob/main/DI-Bootcamp-main/week08/day1/Daily-challenge/src/App.jsx
+suggestions for improvement:
+- Implement the form submission to update the URL with form data as required.
+- Create a FormComponent as a separate component to improve code organization and reusability.
+- Implement a `handleChange` function instead of inline onChange handlers for better code management, especially when dealing with multiple form fields.
+Correctness: 70%
+-----
