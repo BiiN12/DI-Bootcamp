@@ -1,0 +1,7 @@
+URL: URL: https://github.com/BiiN12/DI-Bootcamp/blob/main/DI-Bootcamp-main/week08/day4/Mini-project/src/App.jsx
+suggestions for improvement:
+- The code is well-structured and follows the instructions closely.
+- Consider moving the randomColor function outside of the component if it's not dependent on component state to improve readability.
+- The animation properties could potentially be extracted into CSS classes for better maintainability.
+Correctness: 100%
+-----
