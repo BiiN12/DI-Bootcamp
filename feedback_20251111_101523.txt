@@ -1,0 +1,27 @@
+URL: URL: https://github.com/BiiN12/DI-Bootcamp/blob/main/DI-Bootcamp-main/week10/day2/recipe-book-app/src/main.ts
+suggestions for improvement:
+- Consider using a more robust method for preventing XSS attacks, such as a library specifically designed for sanitizing user input when rendering recipeHTML.
+- The repeated use of querySelector and getElementById could be optimized by caching the elements.
+- Consider implementing error handling, especially when loading and saving from localStorage, to provide a better user experience.
+Correctness: 90%
+-----
+URL: URL: https://github.com/BiiN12/DI-Bootcamp/blob/main/DI-Bootcamp-main/week10/day2/recipe-book-app/src/models/RecipeCollection.ts
+suggestions for improvement:
+- Implement the toggleFavoriteStatus method as required.
+- Consider using UUID for generating unique recipe IDs in the RecipeItem class, as suggested in the project setup.
+- The RecipeItem class is missing. Create a class that represents a single recipe with the specified properties (id, title, ingredients, instructions, isFavorite).
+- The removeRecipe method should ideally use the recipe ID for comparison instead of direct object comparison to avoid issues.
+Correctness: 60%
+-----
+URL: URL: https://github.com/BiiN12/DI-Bootcamp/blob/main/DI-Bootcamp-main/week10/day2/recipe-book-app/src/models/RecipeItem.ts
+suggestions for improvement:
+- No specific feedback.
+Correctness: 100%
+-----
+URL: URL: https://github.com/BiiN12/DI-Bootcamp/blob/main/DI-Bootcamp-main/week10/day2/recipe-book-app/src/templates/RecipeTemplate.ts
+suggestions for improvement:
+- Consider adding methods to show/hide recipe details as outlined in the requirements.
+- The render method currently returns a string. It would be more flexible to return a DOM element.
+- Implement event listeners for the favorite and delete buttons within the class for better encapsulation.
+Correctness: 70%
+-----

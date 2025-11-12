@@ -1,0 +1,27 @@
+URL: URL: https://github.com/BiiN12/DI-Bootcamp/blob/main/DI-Bootcamp-main/week07/day5/ExerciseXP/src/App.jsx
+suggestions for improvement:
+- No specific feedback.
+Correctness: 100%
+-----
+URL: URL: https://github.com/BiiN12/DI-Bootcamp/blob/main/DI-Bootcamp-main/week07/day5/ExerciseXP/src/components/Car.jsx
+suggestions for improvement:
+- The `Garage` component's `size` prop should be passed the value 'small' as per the instructions, but it is being passed 'big'.
+- The Car component receives props named `name` and `model` but these are never passed to the Car component in the App.js file
+Correctness: 50%
+-----
+URL: URL: https://github.com/BiiN12/DI-Bootcamp/blob/main/DI-Bootcamp-main/week07/day5/ExerciseXP/src/components/Events.jsx
+suggestions for improvement:
+- Consider using more descriptive variable names for better readability (e.g., instead of `clicked`, use `isToggleOn`).
+- The input field could be cleared more elegantly using `useState` hook, rather than directly manipulating the DOM element value.
+Correctness: 100%
+-----
+URL: URL: https://github.com/BiiN12/DI-Bootcamp/blob/main/DI-Bootcamp-main/week07/day5/ExerciseXP/src/components/Garage.jsx
+suggestions for improvement:
+- No specific feedback.
+Correctness: 100%
+-----
+URL: URL: https://github.com/BiiN12/DI-Bootcamp/blob/main/DI-Bootcamp-main/week07/day5/ExerciseXP/src/components/Phone.jsx
+suggestions for improvement:
+- No specific feedback.
+Correctness: 100%
+-----
