@@ -1,0 +1,38 @@
+URL: URL: https://github.com/BiiN12/DI-Bootcamp/blob/main/DI-Bootcamp-main/week10/day3/ExerciseXP/index.js
+suggestions for improvement:
+- The code only sets up the basic Express application with middleware and a user route. It needs to include the actual implementation of user authentication endpoints, JWT generation, middleware for authentication, securing routes, handling cookies, and token refresh logic, as described in the chapter.
+- The provided code should include implementations of registration, login, logout, and refresh endpoints.
+- Consider adding error handling middleware to catch errors.
+- Implement proper input validation to prevent vulnerabilities.
+- Use environment variables to store sensitive data such as JWT secrets.
+Correctness: 20%
+-----
+URL: URL: https://github.com/BiiN12/DI-Bootcamp/blob/main/DI-Bootcamp-main/week10/day3/ExerciseXP/routes/userRoute.js
+suggestions for improvement:
+- The code only defines the routes for /register and /login but doesn't implement the actual registration and login logic (user validation, password hashing, JWT generation). These implementations are supposed to be defined in the controllers.
+- The code is missing the implementation of middleware for authentication, securing routes, handling JWT storage in cookies, and token refresh logic as described in chapters 6, 7, 8, and 9.
+- Consider adding error handling to the routes.
+Correctness: 40%
+-----
+URL: URL: https://github.com/BiiN12/DI-Bootcamp/blob/main/DI-Bootcamp-main/week10/day3/ExerciseXP/controllers/authController.js
+suggestions for improvement:
+- Consider adding validation for email and password during registration as suggested in the exercises.
+- Implement refresh tokens for enhanced security and user experience, as outlined in section 9.
+- Move JWT secret key to a more secure configuration, using environment variables is good but consider secrets management solutions.
+- Add error handling for database connection issues.
+Correctness: 80%
+-----
+URL: URL: https://github.com/BiiN12/DI-Bootcamp/blob/main/DI-Bootcamp-main/week10/day3/ExerciseXP/middlewares/userMiddleware.js
+suggestions for improvement:
+- Consider adding error handling for token expiration, which is a common JWT issue.
+- Ensure that `process.env.JWT_SECRET` is properly set and managed in your environment.
+- While this middleware verifies the token, consider implementing more robust error handling and logging for security auditing.
+Correctness: 70%
+-----
+URL: URL: https://github.com/BiiN12/DI-Bootcamp/blob/main/DI-Bootcamp-main/week10/day3/ExerciseXP/config/db.js
+suggestions for improvement:
+- This code sets up a PostgreSQL database connection pool, which is not directly related to the steps outlined in the chapter content about JWT authentication. The chapter focuses on setting up JWT authentication using Node.js, Express, jsonwebtoken, bcrypt, body-parser, and cookie-parser. This code snippet is about database setup, which might be a later step (replacing in-memory data).
+- Consider adding error handling for database connection failures.
+- Ensure environment variables (like DATABASE_URL) are properly secured and managed.
+Correctness: 0%
+-----
