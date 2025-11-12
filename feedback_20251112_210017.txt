@@ -1,0 +1,28 @@
+URL: URL: https://github.com/BiiN12/DI-Bootcamp/blob/main/DI-Bootcamp-main/week10/day3/ExerciseXP/middlewares/userMiddleware.js
+suggestions for improvement:
+- The current implementation only verifies the token but doesn't handle errors that might occur during verification. It's crucial to use a try-catch block to gracefully handle verification errors and provide more informative error messages to the client.
+- Consider adding more logging for debugging purposes, especially in production environments. Logging token verification failures can help identify potential security issues or misconfigurations.
+- While the code checks for the existence of the token in cookies, it would be beneficial to include error handling for situations where the token might be malformed or corrupted. This can prevent unexpected crashes and improve the user experience.
+Correctness: 70%
+-----
+URL: URL: https://github.com/BiiN12/DI-Bootcamp/blob/main/DI-Bootcamp-main/week10/day3/ExerciseXP/controllers/authController.js
+suggestions for improvement:
+- Consider implementing input validation to check for email and password formats.
+- Implement refresh token functionality as described in section 9 of the content.
+- Consider using environment variables for cookie configuration (maxAge, secure, sameSite).
+- Add error handling for database connection errors.
+- For enhanced security, consider rotating JWT secrets periodically.
+- Consider using a dedicated ORM/query builder (like Sequelize or Knex) for database interactions for improved security and maintainability.
+Correctness: 90%
+-----
+URL: URL: https://github.com/BiiN12/DI-Bootcamp/blob/main/DI-Bootcamp-main/week10/day3/ExerciseXP/routes/userRoute.js
+suggestions for improvement:
+- Implement user registration validation to enforce criteria for usernames and passwords inside the register controller.
+- Password hashing should be implemented inside the register controller to store passwords securely.
+- JWT generation after successful registration and login should be handled in the respective controller functions.
+- Set JWT expiration times and secret key during JWT generation.
+- HTTP cookies with the `httpOnly` option should be used to set JWTs.
+- Consider implementing a `/logout` endpoint to clear cookies on logout.
+- Modify the `/login` endpoint to generate both access tokens and refresh tokens.
+Correctness: 50%
+-----
