@@ -1,0 +1,36 @@
+URL: URL: https://github.com/BiiN12/DI-Bootcamp/blob/main/DI-Bootcamp-main/week10/day5/Collaborative-storytelling-app/server/controllers/authController.js
+suggestions for improvement:
+- The code uses cookies to store tokens, contradicting the instructions that state tokens should be stored in-memory in the Redux store.
+- Consider using refresh tokens as suggested in the instructions to improve the user experience and security.
+- Implement input validation and sanitization to prevent SQL injection and other vulnerabilities.
+- Implement authorization middleware as described in the instructions to properly handle user permissions.
+Correctness: 80%
+-----
+URL: URL: https://github.com/BiiN12/DI-Bootcamp/blob/main/DI-Bootcamp-main/week10/day5/Collaborative-storytelling-app/server/controllers/contributorsController.js
+suggestions for improvement:
+- In `deleteContributor`, it checks if the authenticated user is the author of the story to authorize the deletion. However, the query checks if the author_id of the Stories table matches req.userId, but there's no validation of who added the current contributor. Implement a check to ensure that only the story author can delete a contributor.
+- Add try-catch block in each function to handle errors gracefully and provide meaningful error messages to the client.
+- Consolidate database query logic into reusable functions/modules to reduce redundancy and improve maintainability.
+Correctness: 80%
+-----
+URL: URL: https://github.com/BiiN12/DI-Bootcamp/blob/main/DI-Bootcamp-main/week10/day5/Collaborative-storytelling-app/server/controllers/storiesController.js
+suggestions for improvement:
+- Consider using a more robust input validation library to prevent SQL injection vulnerabilities.
+- Implement proper error logging for easier debugging in production environments.
+- Add authorization checks to ensure only authorized users can perform certain actions.
+Correctness: 90%
+-----
+URL: URL: https://github.com/BiiN12/DI-Bootcamp/blob/main/DI-Bootcamp-main/week10/day5/Collaborative-storytelling-app/server/middleware/authMiddleware.js
+suggestions for improvement:
+- The code should prioritize checking for the 'Authorization' header and extract the token after the 'Bearer ' prefix, rather than immediately checking `req.cookies.token`.
+- The verification process should handle expired tokens gracefully, possibly by implementing token refresh logic as suggested in the chapter content.
+- The code should avoid logging sensitive information like the decoded token payload in production environments.
+Correctness: 50%
+-----
+URL: URL: https://github.com/BiiN12/DI-Bootcamp/blob/main/DI-Bootcamp-main/week10/day5/Collaborative-storytelling-app/server/routes/storiesRoute.js
+suggestions for improvement:
+- The CORS configuration should not be hardcoded with a specific origin, especially in a production environment. Use environment variables to manage the origin or allow all origins during development.
+- Consider using PATCH instead of PUT for updating stories as PUT implies replacing the entire resource, while PATCH implies partial updates.
+- The authMiddleware is applied to all routes. Evaluate if every route truly requires authentication, or if certain routes (e.g., fetching stories) can be accessed without it. This can impact performance and user experience.
+Correctness: 70%
+-----
