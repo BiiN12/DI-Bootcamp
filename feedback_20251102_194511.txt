@@ -1,0 +1,14 @@
+URL: URL: https://github.com/BiiN12/DI-Bootcamp/blob/main/DI-Bootcamp-main/week08/day4/Mini-project/src/App.jsx
+suggestions for improvement:
+- Ensure that the same quote is not displayed twice in a row. Implement logic to compare the new quote with the previous one and regenerate if they are the same.
+- Consider extracting the color changing logic into a separate reusable function to improve code organization.
+- Use descriptive variable names to enhance code readability (e.g., `randomColor` could be `generateRandomColor`).
+- The initial state of quotes should be null or undefined, not an empty string.
+Correctness: 70%
+-----
+URL: URL: https://github.com/BiiN12/DI-Bootcamp/blob/main/DI-Bootcamp-main/week08/day4/Mini-project/src/models/quotesDatabase.js
+suggestions for improvement:
+- The provided code is only a list of quotes and authors and does not fulfill the requirements of creating a React component for a random quote generator with the specified functionalities (displaying quotes, authors, generating new quotes on button click, changing background and text colors randomly).
+- The code does not include any React components, state management, or event handling, which are key concepts mentioned in the 'What you will learn' section.
+Correctness: 0%
+-----
